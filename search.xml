@@ -17,4 +17,27 @@
         <category>杂谈</category>
       </categories>
   </entry>
+  <entry>
+    <title>hexo搭建博客</title>
+    <url>/2021/07/11/talk02/</url>
+    <content><![CDATA[<h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>博客作为一个可以分享生活以及技术的平台，越来越受欢迎，而作为一个程序猿（前端打字员），怎么能没有一个属于自己的个人博客呢。而正好最近，本人也是在家利用周末的时间，搭建了自己的博客，在这里了就把这样一整个过程记录下来，分享给你，希望能对你有所帮助！首先了我的博客是采用hexo搭建，部署在github上，然后在阿里云买了一个域名用来做域名解析，最后解析完成后就可以通过这个域名来进行访问啦。</p>
+<h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h3><p>首先在开始之前了，我们需要配置一下我们的环境，环境配置当然也就很简单了，可以简单的分为以下几步：node安装，建立github仓库（博客文件的存放位置），安装hexo。完成hexo安装之后，基本上就可以宣告我们的博客搭建已经成功一半啦！<br>安装 Hexo 完成后，你可以执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">$ hexo init <span class="xml"><span class="tag">&lt;<span class="name">folder</span>&gt;</span></span></span><br><span class="line">$ cd <span class="xml"><span class="tag">&lt;<span class="name">folder</span>&gt;</span></span></span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>新建完成后，指定文件夹的目录如下：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── <span class="emphasis">_config.yml</span></span><br><span class="line"><span class="emphasis">├── package.json</span></span><br><span class="line"><span class="emphasis">├── scaffolds</span></span><br><span class="line"><span class="emphasis">├── source</span></span><br><span class="line"><span class="emphasis">|   ├── _</span>drafts</span><br><span class="line">|   └── <span class="emphasis">_posts</span></span><br><span class="line"><span class="emphasis">└── themes</span></span><br></pre></td></tr></table></figure>
+<p>_config.yml<br>网站的 配置 信息，您可以在此配置大部分的参数。<br>执行hexo s 可以本地运行啦，cheers！本地项目跑起来之后，就可以配置主题啦！<a href="https://hexo.io/themes/">hexo主题</a>提供了很多主题,你可以选择一个你比较喜欢的主题来进行安装，你可以通过npm i 安装，也可以通过github拉取安装，这里我们以next主题为例来简单的介绍一下hexo中主题的配置！<br>通过git可以拉取到这个主题到我们本地的博客文件夹，拉取下来之后就可以愉快的开始进行配置了！</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<h3 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h3><p>主题配置主要在主题文件夹下的_config.yml中进行配置，我们这里简单的罗列一下一些基本的配置，更为详细的配置可以查看<a href="https://hexo.io/zh-cn/docs/configuration.html">hexo主题配置</a><br>菜单配置</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || fa fa-home</span><br><span class="line">  tags: /tags/ || fa fa-tags</span><br><span class="line">  categories: /categories/ || fa fa-th </span><br></pre></td></tr></table></figure>
+<p>头像配置：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">avatar:</span><br><span class="line">  url: /images/header.jpg #/images/avatar.gif</span><br></pre></td></tr></table></figure>
+<p> 修改完之后，可以重新执行hexo s在浏览器查看效果。并确认无误，包括以后需要添加文章，或者更新主题等，都建议先在本地查看无误再远程部署。<br> 这里有几个重要的点需要注意下！<br> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">1、language是设置语言。zh-Hans是中文。</span><br><span class="line">2、如果设置zh-Hans后仍出现乱码问题。需要更改文件的字符编码集为UTF-8,方法很多具体，就不详细介绍了。</span><br></pre></td></tr></table></figure><br>注意同时需要在根目录的_config.yml中配置自己的githu远程仓库地址</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: &#x27;你的博客的gitbub仓库地址&#x27;</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p> 本地预览确认下博客的效果后，没有问题就可以生成并发布了!<br>执行以下命令即可重新打包生成对应的静态文件并将这些文件部署到我们之前创建好的github的仓库里。</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">hexo s &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+<!-- ![pic](http://img.netbian.com/file/2021/0502/17d449ebe5f05a7d0e026773b1601ef7.jpg) -->]]></content>
+      <tags>
+        <tag>博客搭建</tag>
+      </tags>
+  </entry>
 </search>
