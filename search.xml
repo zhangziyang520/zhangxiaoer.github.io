@@ -31,11 +31,21 @@
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || fa fa-home</span><br><span class="line">  tags: /tags/ || fa fa-tags</span><br><span class="line">  categories: /categories/ || fa fa-th </span><br></pre></td></tr></table></figure>
 <p>头像配置：</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">avatar:</span><br><span class="line">  url: /images/header.jpg #/images/avatar.gif</span><br></pre></td></tr></table></figure>
-<p> 修改完之后，可以重新执行hexo s在浏览器查看效果。并确认无误，包括以后需要添加文章，或者更新主题等，都建议先在本地查看无误再远程部署。<br> 这里有几个重要的点需要注意下！<br> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">1、language是设置语言。zh-Hans是中文。</span><br><span class="line">2、如果设置zh-Hans后仍出现乱码问题。需要更改文件的字符编码集为UTF-8,方法很多具体，就不详细介绍了。</span><br></pre></td></tr></table></figure><br>注意同时需要在根目录的_config.yml中配置自己的githu远程仓库地址</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: &#x27;你的博客的gitbub仓库地址&#x27;</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p> 修改完之后，可以重新执行hexo s在浏览器查看效果。并确认无误，包括以后需要添加文章，或者更新主题等，都建议先在本地查看无误再远程部署。<br> 这里有几个重要的点需要注意下！<br> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">1、language是设置语言。zh-Hans是中文。</span><br><span class="line">2、如果设置zh-Hans后仍出现乱码问题。需要更改文件的字符编码集为UTF-8,方法很多具体，就不详细介绍了。</span><br></pre></td></tr></table></figure><br>注意同时需要在根目录的_config.yml中配置自己的github远程仓库地址</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: &#x27;你的博客的github仓库地址&#x27;</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 <h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p> 本地预览确认下博客的效果后，没有问题就可以生成并发布了!<br>执行以下命令即可重新打包生成对应的静态文件并将这些文件部署到我们之前创建好的github的仓库里。</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">hexo s &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-<!-- ![pic](http://img.netbian.com/file/2021/0502/17d449ebe5f05a7d0e026773b1601ef7.jpg) -->]]></content>
+
+<h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><p>在阿里云或者腾讯云买一个自己比较中意的域名，这里以阿里云为例，其他厂家的域名解析可能存在一些区别，但是大抵上都差不太多！首先我们打开阿里云的控制台，进入域名解析，点击自己所购买的域名,<br><img src="/images/talk02/pic01.png" alt="pic"></p>
+<ol>
+<li><strong>添加CNAME记录</strong><br><img src="/images/talk02/pic02.png" alt="pic"></li>
+<li><strong>创建CNAM文件</strong><br>在根目录的public目录下创建一个CNAME文件，文件内容为自己所购买的域名，执行hexo g &amp;&amp; hexo d 。<br><img src="/images/talk02/pic03.png" alt="pic"></li>
+<li><strong>配置github-page自定义域</strong><br>在github的仓库地址中设置自定义域<br><img src="/images/talk02/pic04.png" alt="pic"><br>以上就是利用hexo+github搭建自己博客的整个过程，如对此有任何疑问，欢迎在下方评论区进行提问！</li>
+</ol>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
       <tags>
         <tag>博客搭建</tag>
       </tags>
