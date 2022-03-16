@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh:CN">
+<html lang="zh-cn">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -26,15 +26,16 @@
 <meta property="og:url" content="https://zhangziyangblog.cn/2022/03/06/0306/index.html">
 <meta property="og:site_name" content="章同学的blog">
 <meta property="og:description" content="前端代码规范如果你有去过大厂，或者说有过大厂相关的项目经历，相信你一定对代码规范有所了解。而作为大厂的前端，有一项是必须要做的事情，就是要遵守代码规范，并写出像诗一样的代码😁那么为什么大厂会这么会这么重视代码规范呢，其实答案很简单。通常代码的项目都很大，很多人并行开发，然而每个人的写代码的习惯都不一样，例如有的人习惯写注释，有的人却没有写注释的习惯，所以为了统一大家的代码风格，为了便于日后的代码">
-<meta property="og:locale">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zhangziyangblog.cn/images/tx.png">
 <meta property="og:image" content="https://zhangziyangblog.cn/images/jd.png">
 <meta property="og:image" content="https://zhangziyangblog.cn/images/bd.png">
 <meta property="og:image" content="https://zhangziyangblog.cn/images/vue.png">
 <meta property="og:image" content="https://zhangziyangblog.cn/images/eslint.png">
 <meta property="article:published_time" content="2022-03-06T10:55:30.000Z">
-<meta property="article:modified_time" content="2022-03-06T11:38:06.199Z">
+<meta property="article:modified_time" content="2022-03-15T13:50:49.151Z">
 <meta property="article:author" content="章同学">
+<meta property="article:tag" content="前端代码规范">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://zhangziyangblog.cn/images/tx.png">
 
@@ -47,7 +48,7 @@
     sidebar: "",
     isHome : false,
     isPost : true,
-    lang   : 'zh:CN'
+    lang   : 'zh-cn'
   };
 </script>
 
@@ -95,7 +96,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
+    <div class="toggle" aria-label="切换导航栏">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -125,22 +126,27 @@
   <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
   </ul>
@@ -170,7 +176,7 @@
     
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh:CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
     <link itemprop="mainEntityOfPage" href="https://zhangziyangblog.cn/2022/03/06/0306/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -192,11 +198,17 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
-              <time title="Created: 2022-03-06 18:55:30 / Modified: 19:38:06" itemprop="dateCreated datePublished" datetime="2022-03-06T18:55:30+08:00">2022-03-06</time>
+              <time title="创建时间：2022-03-06 18:55:30" itemprop="dateCreated datePublished" datetime="2022-03-06T18:55:30+08:00">2022-03-06</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-15 21:50:49" itemprop="dateModified" datetime="2022-03-15T21:50:49+08:00">2022-03-15</time>
+              </span>
 
           
 
@@ -243,6 +255,9 @@
       </div>
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/" rel="tag"># 前端代码规范</a>
+          </div>
 
         
 
@@ -296,10 +311,10 @@
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          Table of Contents
+          文章目录
         </li>
         <li class="sidebar-nav-overview">
-          Overview
+          站点概览
         </li>
       </ul>
 
@@ -322,8 +337,14 @@
           <a href="/archives/">
         
           <span class="site-state-item-count">1</span>
-          <span class="site-state-item-name">posts</span>
+          <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
